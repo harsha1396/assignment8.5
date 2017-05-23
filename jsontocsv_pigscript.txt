@@ -1,0 +1,7 @@
+Pigscript:-
+
+Loadcommand:
+a = LOAD '/user/acadgild/olympic.json' USING JsonLoader('athelete:chararray,age:INT,country:chararray,year:chararray,closing:chararray,sport:chararray,gold:INT,silver:INT,bronze:INT,total:INT');
+
+Storecommand:
+STORE a INTO '/jsontocsv' USING org.apache.pig.piggybank.storage.CSVExcelStorage();
